@@ -11,6 +11,8 @@ import (
 	"github.com/gin-gonic/gin/binding"
 )
 
+//liujia: 设置模式，debug release test三种
+
 const ENV_GIN_MODE = "GIN_MODE"
 
 const (

@@ -14,6 +14,8 @@ import (
 	"runtime"
 )
 
+//liujia: 应该是Recovery中间件，防止有错误发生，发生时兜底
+
 var (
 	dunno     = []byte("???")
 	centerDot = []byte("·")

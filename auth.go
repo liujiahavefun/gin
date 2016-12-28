@@ -10,6 +10,8 @@ import (
 	"strconv"
 )
 
+// liujia:应该是authentication的中间件，没细看
+
 const AuthUserKey = "user"
 
 type (

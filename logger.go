@@ -13,6 +13,8 @@ import (
 	"github.com/mattn/go-isatty"
 )
 
+//liujia: 应该是日志中间件
+
 var (
 	green   = string([]byte{27, 91, 57, 55, 59, 52, 50, 109})
 	white   = string([]byte{27, 91, 57, 48, 59, 52, 55, 109})

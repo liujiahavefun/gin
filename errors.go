@@ -11,6 +11,9 @@ import (
 	"reflect"
 )
 
+//liujia: 看完了，能看懂就是不知道干啥的
+//json := H{} 这个是啥？唯一不懂的地方
+
 type ErrorType uint64
 
 const (
@@ -19,7 +22,7 @@ const (
 	ErrorTypePrivate ErrorType = 1 << 0
 	ErrorTypePublic  ErrorType = 1 << 1
 
-	ErrorTypeAny ErrorType = 1<<64 - 1
+	ErrorTypeAny ErrorType = 1<<64 - 1 //liujia: 全是111111？直接 -1不行么？-1不能赋给unint64吧？
 	ErrorTypeNu            = 2
 )
 
@@ -33,7 +36,7 @@ type (
 	errorMsgs []*Error
 )
 
-var _ error = &Error{}
+var _ error = &Error{} //liujia:这个是保证Error一定实现了error接口吧。。。
 
 func (msg *Error) SetType(flags ErrorType) *Error {
 	msg.Type = flags
@@ -71,6 +74,7 @@ func (msg *Error) MarshalJSON() ([]byte, error) {
 	return json.Marshal(msg.JSON())
 }
 
+//liujia: 相当于override了error的Error()接口，调用内嵌的Err的Error()，所以这里不能匿名包含
 // Implements the error interface
 func (msg *Error) Error() string {
 	return msg.Err.Error()

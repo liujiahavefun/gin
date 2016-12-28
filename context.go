@@ -20,6 +20,8 @@ import (
 	"golang.org/x/net/context"
 )
 
+//liujia: Context可以理解为一次HTTP请求处理的上下文
+
 // Content-Type MIME of the most common data formats
 const (
 	MIMEJSON              = binding.MIMEJSON
