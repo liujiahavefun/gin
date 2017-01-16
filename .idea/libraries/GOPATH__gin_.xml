@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;gin&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../ygo" />
+      <root url="file://$PROJECT_DIR$/../martini" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../smartgo" />
+      <root url="file://$PROJECT_DIR$/../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../martini-contrib" />
+      <root url="file://$PROJECT_DIR$/../ds" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../ygo" />
+      <root url="file://$PROJECT_DIR$/../martini" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../smartgo" />
+      <root url="file://$PROJECT_DIR$/../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../martini-contrib" />
+      <root url="file://$PROJECT_DIR$/../ds" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

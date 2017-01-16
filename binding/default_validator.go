@@ -24,6 +24,8 @@ func (v *defaultValidator) ValidateStruct(obj interface{}) error {
 	return nil
 }
 
+//liujia:这种写法适用于 1）第一次被调用时初始化 2）并且保证只初始化(被调用)一次
+//validator.v8这个package干啥用的？
 func (v *defaultValidator) lazyinit() {
 	v.once.Do(func() {
 		config := &validator.Config{TagName: "binding"}
@@ -31,6 +33,7 @@ func (v *defaultValidator) lazyinit() {
 	})
 }
 
+//liujia:返回data的类型，如果data是指针，返回指针指向的类型
 func kindOfData(data interface{}) reflect.Kind {
 	value := reflect.ValueOf(data)
 	valueType := value.Kind()
