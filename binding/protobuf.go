@@ -24,6 +24,7 @@ func (protobufBinding) Bind(req *http.Request, obj interface{}) error {
 		return err
 	}
 
+	//liujia: obj.(proto.Message)这种写法是?
 	if err = proto.Unmarshal(buf, obj.(proto.Message)); err != nil {
 		return err
 	}
